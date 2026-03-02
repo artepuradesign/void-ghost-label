@@ -149,9 +149,14 @@
   color: #00ff41 !important;
 }
 
-/* Logo DARK: icon white, "API" white, "Painel" green */
+/* Logo DARK: icon animates white→green→white, "API" white, "Painel" green */
 .theme-matrix.dark .matrix-logo-icon {
-  color: #ffffff !important;
+  animation: matrix-logo-icon-dark 3s ease-in-out infinite !important;
+}
+
+@keyframes matrix-logo-icon-dark {
+  0%, 100% { color: #ffffff; }
+  50% { color: #00ff41; }
 }
 
 .theme-matrix.dark .matrix-logo-api {
@@ -362,4 +367,110 @@
 /* Carousel play/pause button */
 .theme-matrix .text-brand-purple.dark\:text-brand-purple {
   color: #00cc33 !important;
+}
+
+/* ===== FOOTER: social icons green in dark matrix ===== */
+.theme-matrix.dark footer .text-gray-500,
+.theme-matrix.dark footer .text-muted-foreground {
+  color: #00aa28 !important;
+}
+
+.theme-matrix.dark footer .bg-gray-100,
+.theme-matrix.dark footer .dark\:bg-gray-800,
+.theme-matrix.dark footer .bg-muted {
+  background-color: rgba(0, 40, 15, 0.8) !important;
+}
+
+.theme-matrix.dark footer a:hover .text-gray-500,
+.theme-matrix.dark footer a:hover .text-muted-foreground {
+  color: #00ff41 !important;
+}
+
+/* Footer hover bg: green instead of purple */
+.theme-matrix footer .hover\:bg-brand-purple:hover {
+  background-color: #00aa28 !important;
+}
+
+.theme-matrix footer .hover\:shadow-brand-purple\/25:hover {
+  --tw-shadow-color: rgba(0, 204, 51, 0.25) !important;
+}
+
+/* ===== MODULE CARDS: blue icons → black in dark matrix ===== */
+.theme-matrix.dark .text-blue-300,
+.theme-matrix.dark .text-blue-400,
+.theme-matrix.dark .text-blue-600 {
+  color: #000000 !important;
+}
+
+/* Keep green icons green */
+.theme-matrix.dark .text-green-300,
+.theme-matrix.dark .text-green-400,
+.theme-matrix.dark .text-green-500 {
+  color: #00ff41 !important;
+}
+
+/* ===== TESTIMONIALS: black bg in light matrix ===== */
+.theme-matrix:not(.dark) .bg-white\/80,
+.theme-matrix:not(.dark) .dark\:bg-gray-800\/80 {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border-color: rgba(0, 255, 65, 0.2) !important;
+}
+
+.theme-matrix:not(.dark) .bg-white\/80 .text-gray-900,
+.theme-matrix:not(.dark) .bg-white\/80 .text-gray-600,
+.theme-matrix:not(.dark) .bg-white\/80 .text-gray-500 {
+  color: #e0ffe0 !important;
+}
+
+.theme-matrix:not(.dark) .bg-white\/80 .border-brand-purple\/30 {
+  border-color: rgba(0, 255, 65, 0.3) !important;
+}
+
+/* Avatar gradient: purple → green in matrix */
+.theme-matrix .from-brand-purple.to-purple-600 {
+  background: linear-gradient(to bottom right, #00cc33, #00aa28) !important;
+}
+
+.theme-matrix .ring-brand-purple\/20 {
+  --tw-ring-color: rgba(0, 204, 51, 0.2) !important;
+}
+
+/* ===== MODULE CARDS: black bg in light matrix ===== */
+.theme-matrix:not(.dark) .homepage-module-card .bg-white,
+.theme-matrix:not(.dark) .homepage-module-card [class*="bg-white"] {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border-color: rgba(0, 255, 65, 0.3) !important;
+}
+
+.theme-matrix:not(.dark) .homepage-module-card .text-gray-900,
+.theme-matrix:not(.dark) .homepage-module-card .text-gray-600,
+.theme-matrix:not(.dark) .homepage-module-card .text-gray-500 {
+  color: #e0ffe0 !important;
+}
+
+/* ===== "Comece em 1 minuto" and all default buttons → green ===== */
+/* Already handled by .theme-matrix .bg-primary overrides */
+
+/* ===== Ensure ALL buttons are green in matrix (both light and dark) ===== */
+.theme-matrix button.bg-primary,
+.theme-matrix [class*="bg-primary"]:not([class*="bg-primary/"]) {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix button.bg-primary:hover,
+.theme-matrix [class*="bg-primary"]:not([class*="bg-primary/"]):hover {
+  background-color: #00aa28 !important;
+}
+
+.theme-matrix .text-primary-foreground {
+  color: #000000 !important;
+}
+
+/* Secondary buttons also green */
+.theme-matrix .bg-secondary {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix .text-secondary-foreground {
+  color: #000000 !important;
 }
