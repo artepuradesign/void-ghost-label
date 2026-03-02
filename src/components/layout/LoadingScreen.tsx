@@ -16,14 +16,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
 }) => {
   return (
     <PageLayout variant={variant} backgroundOpacity="strong" showGradients={false}>
-      {/* Theme Switcher */}
-      <div className="absolute top-6 right-6 z-20">
-        <ThemeSwitcher />
-      </div>
-
       <div className="flex items-center justify-center min-h-screen p-6">
         <div className="w-full max-w-sm relative z-10" data-aos="fade-up">
-          <div className="bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/30 dark:bg-gray-800/95 dark:border-gray-700/50 relative">
+          <div className="p-8 rounded-xl relative">
             {/* Logo */}
             <div className="mb-8 text-center">
               <TextLogo />
