@@ -435,17 +435,23 @@
   --tw-ring-color: rgba(0, 204, 51, 0.2) !important;
 }
 
-/* ===== MODULE CARDS: black bg in light matrix ===== */
+/* ===== MODULE CARDS: gray bg in light matrix ===== */
 .theme-matrix:not(.dark) .homepage-module-card .bg-white,
-.theme-matrix:not(.dark) .homepage-module-card [class*="bg-white"] {
-  background: rgba(0, 0, 0, 0.9) !important;
-  border-color: rgba(0, 255, 65, 0.3) !important;
+.theme-matrix:not(.dark) .homepage-module-card [class*="bg-white"],
+.theme-matrix:not(.dark) .homepage-module-card [class*="bg-gray-50"] {
+  background: rgba(55, 55, 55, 0.95) !important;
+  border-color: rgba(0, 255, 65, 0.25) !important;
 }
 
 .theme-matrix:not(.dark) .homepage-module-card .text-gray-900,
-.theme-matrix:not(.dark) .homepage-module-card .text-gray-600,
-.theme-matrix:not(.dark) .homepage-module-card .text-gray-500 {
+.theme-matrix:not(.dark) .homepage-module-card .text-gray-100 {
   color: #e0ffe0 !important;
+}
+
+.theme-matrix:not(.dark) .homepage-module-card .text-gray-600,
+.theme-matrix:not(.dark) .homepage-module-card .text-gray-500,
+.theme-matrix:not(.dark) .homepage-module-card .text-gray-300 {
+  color: #a0d8a0 !important;
 }
 
 /* ===== FORCE ALL BUTTONS GREEN in matrix ===== */
@@ -546,4 +552,22 @@
 .theme-matrix [class*="hover:bg-purple-700"]:hover,
 .theme-matrix [class*="hover:bg-purple-800"]:hover {
   background-color: #009922 !important;
+}
+
+/* ===== TESTIMONIALS HEADER: light matrix ===== */
+/* "Depoimentos" title → black in light mode */
+.theme-matrix:not(.dark) section .text-xl.font-bold.text-gray-900,
+.theme-matrix:not(.dark) section h2.text-gray-900 {
+  color: #000000 !important;
+}
+
+/* Subtitle → gray in light mode */
+.theme-matrix:not(.dark) section .text-sm.text-gray-600 {
+  color: #666666 !important;
+}
+
+/* ===== /planos-publicos PAGE: matrix bg support ===== */
+/* Hide the default animated background in matrix theme */
+.theme-matrix .planos-publicos-bg {
+  display: none !important;
 }
