@@ -138,7 +138,7 @@
   border-color: #00cc33 !important;
 }
 
-/* ===== LOGO: dark matrix = green, white, black only ===== */
+/* ===== LOGO: dark matrix = white + green only ===== */
 .theme-matrix.dark .text-brand-purple.dark\:text-purple-400[class*="animate-logo"] {
   color: #00ff41 !important;
 }
@@ -149,9 +149,9 @@
   color: #00ff41 !important;
 }
 
-/* Logo DARK: icon green, "API" white, "Painel" green */
+/* Logo DARK: icon white, "API" white, "Painel" green */
 .theme-matrix.dark .matrix-logo-icon {
-  color: #00ff41 !important;
+  color: #ffffff !important;
 }
 
 .theme-matrix.dark .matrix-logo-api {
@@ -162,7 +162,7 @@
   color: #00ff41 !important;
 }
 
-/* Logo LIGHT: icon alternates black/green/white, text black */
+/* Logo LIGHT: icon alternates black/green, "API" black, "Painel" green */
 .theme-matrix:not(.dark) .matrix-logo-icon {
   animation: matrix-logo-icon-light 3s ease-in-out infinite !important;
 }
@@ -172,11 +172,124 @@
 }
 
 .theme-matrix:not(.dark) .matrix-logo-painel {
-  color: #000000 !important;
+  color: #00cc33 !important;
 }
 
 @keyframes matrix-logo-icon-light {
   0%, 100% { color: #000000; }
-  33% { color: #00cc33; }
-  66% { color: #ffffff; }
+  50% { color: #00cc33; }
+}
+
+/* ===== LIGHT matrix: replace purple with green ===== */
+.theme-matrix:not(.dark) .text-brand-purple {
+  color: #00cc33 !important;
+}
+
+.theme-matrix:not(.dark) .bg-brand-purple {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix:not(.dark) .hover\:bg-brand-darkPurple:hover {
+  background-color: #009922 !important;
+}
+
+/* ===== HERO SECTION: matrix green buttons ===== */
+.theme-matrix .bg-secondary {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix .hover\:bg-secondary\/90:hover {
+  background-color: #00b82e !important;
+}
+
+.theme-matrix .text-secondary-foreground {
+  color: #000000 !important;
+}
+
+/* "Entrar" button (variant=default uses bg-primary) */
+.theme-matrix .bg-primary {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix .hover\:bg-primary\/90:hover {
+  background-color: #00b82e !important;
+}
+
+.theme-matrix .text-primary-foreground {
+  color: #000000 !important;
+}
+
+/* Hero benefit icons */
+.theme-matrix .text-purple-300 {
+  color: #00ff41 !important;
+}
+
+/* ===== PLAN CARDS: green theme ===== */
+/* Card background with dark green gradient */
+.theme-matrix .plan-card-matrix,
+.theme-matrix section [class*="bg-white"][class*="dark:bg-gray-800"] {
+  background: linear-gradient(135deg, hsl(140 60% 10% / 0.85), hsl(140 50% 15% / 0.9), hsl(140 40% 8% / 0.85)) !important;
+  border-color: rgba(0, 255, 65, 0.2) !important;
+}
+
+/* Plan card text colors */
+.theme-matrix .text-purple-600,
+.theme-matrix .dark\:text-purple-400 {
+  color: #00ff41 !important;
+}
+
+/* Plan card badge: green instead of purple */
+.theme-matrix .bg-purple-500 {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix .ring-purple-500 {
+  --tw-ring-color: #00cc33 !important;
+}
+
+.theme-matrix .border-purple-600,
+.theme-matrix .text-purple-600.border-purple-600 {
+  border-color: #00cc33 !important;
+  color: #00ff41 !important;
+}
+
+/* Plan card icon background */
+.theme-matrix .from-purple-50,
+.theme-matrix .to-purple-100,
+.theme-matrix .dark\:from-purple-900\/50,
+.theme-matrix .dark\:to-purple-800\/50 {
+  background: rgba(0, 204, 51, 0.15) !important;
+}
+
+.theme-matrix .border-purple-200,
+.theme-matrix .dark\:border-purple-700 {
+  border-color: rgba(0, 255, 65, 0.3) !important;
+}
+
+/* Plan card buttons */
+.theme-matrix .bg-purple-600 {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix .hover\:bg-purple-700:hover {
+  background-color: #009922 !important;
+}
+
+/* Plan card hover states */
+.theme-matrix .hover\:border-purple-300:hover,
+.theme-matrix .dark\:hover\:border-purple-600:hover {
+  border-color: #00ff41 !important;
+}
+
+/* Card text should be light on dark green bg */
+.theme-matrix section .text-gray-900,
+.theme-matrix section .dark\:text-gray-100 {
+  color: #e0ffe0 !important;
+}
+
+.theme-matrix section .text-gray-600,
+.theme-matrix section .dark\:text-gray-400,
+.theme-matrix section .text-gray-500,
+.theme-matrix section .dark\:text-gray-400 {
+  color: #a0d8a0 !important;
 }

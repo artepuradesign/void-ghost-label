@@ -202,7 +202,7 @@ const HomeCarouselSection: React.FC = () => {
                               </motion.p>
                             </AnimatePresence>
 
-                            <div className="mt-4 sm:mt-5 flex flex-col sm:flex-row flex-wrap gap-2 justify-center sm:justify-start">
+                            <div className="mt-4 sm:mt-5 flex flex-col sm:flex-row flex-wrap gap-2 justify-center">
                               <Button
                                 size="sm"
                                 className={cn("w-full sm:w-auto", isMatrix ? "" : "hidden sm:inline-flex")}
