@@ -448,29 +448,102 @@
   color: #e0ffe0 !important;
 }
 
-/* ===== "Comece em 1 minuto" and all default buttons → green ===== */
-/* Already handled by .theme-matrix .bg-primary overrides */
-
-/* ===== Ensure ALL buttons are green in matrix (both light and dark) ===== */
-.theme-matrix button.bg-primary,
-.theme-matrix [class*="bg-primary"]:not([class*="bg-primary/"]) {
+/* ===== FORCE ALL BUTTONS GREEN in matrix ===== */
+/* Primary buttons (Entrar, Testar grátis hero, Comece em 1 minuto) */
+.theme-matrix button[class*="bg-primary"],
+.theme-matrix a button[class*="bg-primary"],
+.theme-matrix [class*="bg-primary"]:not([class*="/"]):not(div) {
   background-color: #00cc33 !important;
+  border-color: #00cc33 !important;
 }
 
-.theme-matrix button.bg-primary:hover,
-.theme-matrix [class*="bg-primary"]:not([class*="bg-primary/"]):hover {
+.theme-matrix button[class*="bg-primary"]:hover,
+.theme-matrix a button[class*="bg-primary"]:hover {
   background-color: #00aa28 !important;
+  border-color: #00aa28 !important;
 }
 
 .theme-matrix .text-primary-foreground {
   color: #000000 !important;
 }
 
-/* Secondary buttons also green */
-.theme-matrix .bg-secondary {
+/* Secondary buttons (Testar grátis menu) */
+.theme-matrix button[class*="bg-secondary"],
+.theme-matrix a button[class*="bg-secondary"] {
   background-color: #00cc33 !important;
+  border-color: #00cc33 !important;
+}
+
+.theme-matrix button[class*="bg-secondary"]:hover,
+.theme-matrix a button[class*="bg-secondary"]:hover {
+  background-color: #00aa28 !important;
+  border-color: #00aa28 !important;
 }
 
 .theme-matrix .text-secondary-foreground {
   color: #000000 !important;
+}
+
+/* ===== MODULE ICON BG: purple → black ===== */
+.theme-matrix .bg-purple-800\/60,
+.theme-matrix .bg-purple-100,
+.theme-matrix [class*="bg-purple-800"],
+.theme-matrix [class*="bg-purple-100"] {
+  background-color: #000000 !important;
+}
+
+.theme-matrix .border-purple-600\/30,
+.theme-matrix .border-purple-200,
+.theme-matrix [class*="border-purple-600"],
+.theme-matrix [class*="border-purple-200"] {
+  border-color: rgba(0, 255, 65, 0.3) !important;
+}
+
+/* Module icon color: green */
+.theme-matrix .text-purple-300,
+.theme-matrix .text-purple-600,
+.theme-matrix [class*="text-purple-300"],
+.theme-matrix [class*="text-purple-600"] {
+  color: #00ff41 !important;
+}
+
+/* Module card title hover → green */
+.theme-matrix .homepage-module-card:hover .text-gray-900,
+.theme-matrix .homepage-module-card:hover .text-gray-100,
+.theme-matrix .homepage-module-card:hover [class*="text-green-400"] {
+  color: #00ff41 !important;
+}
+
+/* ===== CAROUSEL DOTS/INDICATORS: purple → green ===== */
+.theme-matrix .bg-brand-purple {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix .border-brand-purple\/30 {
+  border-color: rgba(0, 204, 51, 0.3) !important;
+}
+
+/* Testimonials "Compartilhe" button */
+.theme-matrix .text-brand-purple {
+  color: #00cc33 !important;
+}
+
+.theme-matrix .hover\:bg-brand-purple:hover {
+  background-color: #00cc33 !important;
+}
+
+/* Loading spinner */
+.theme-matrix .border-brand-purple {
+  border-color: #00cc33 !important;
+}
+
+/* ===== MODULE CARD BUTTON: purple → green ===== */
+.theme-matrix .bg-purple-500,
+.theme-matrix [class*="bg-purple-500"] {
+  background-color: #00cc33 !important;
+}
+
+.theme-matrix [class*="hover:bg-purple-700"]:hover,
+.theme-matrix [class*="hover:bg-purple-800"]:hover {
+  background-color: #009922 !important;
 }
