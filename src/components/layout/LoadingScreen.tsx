@@ -18,7 +18,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
     <PageLayout variant={variant} backgroundOpacity="strong" showGradients={false}>
       <div className="flex items-center justify-center min-h-screen p-6">
         <div className="w-full max-w-sm relative z-10" data-aos="fade-up">
-          <div className="p-8 rounded-xl relative">
+          <div className="bg-card/95 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-border/30 relative">
             {/* Logo */}
             <div className="mb-8 text-center">
               <TextLogo />
