@@ -162,7 +162,7 @@
   color: #00ff41 !important;
 }
 
-/* Logo LIGHT: icon alternates black/green, "API" black, "Painel" green */
+/* Logo LIGHT: icon alternates black/green, "API" and "Painel" both black */
 .theme-matrix:not(.dark) .matrix-logo-icon {
   animation: matrix-logo-icon-light 3s ease-in-out infinite !important;
 }
@@ -172,12 +172,13 @@
 }
 
 .theme-matrix:not(.dark) .matrix-logo-painel {
-  color: #00cc33 !important;
+  color: #000000 !important;
 }
 
 @keyframes matrix-logo-icon-light {
   0%, 100% { color: #000000; }
-  50% { color: #00cc33; }
+  33% { color: #00cc33; }
+  66% { color: #ffffff; }
 }
 
 /* ===== LIGHT matrix: replace purple with green ===== */
@@ -226,53 +227,78 @@
 
 /* ===== PLAN CARDS: green theme ===== */
 /* Card background with dark green gradient */
-.theme-matrix .plan-card-matrix,
-.theme-matrix section [class*="bg-white"][class*="dark:bg-gray-800"] {
-  background: linear-gradient(135deg, hsl(140 60% 10% / 0.85), hsl(140 50% 15% / 0.9), hsl(140 40% 8% / 0.85)) !important;
-  border-color: rgba(0, 255, 65, 0.2) !important;
+.theme-matrix .plan-card-matrix {
+  background: linear-gradient(145deg, rgba(0, 40, 15, 0.95) 0%, rgba(0, 60, 20, 0.9) 50%, rgba(0, 30, 10, 0.95) 100%) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3) !important;
 }
 
-/* Plan card text colors */
+/* Top gradient bar on cards: purple → green */
+.theme-matrix .plan-card-matrix .bg-gradient-to-r.from-purple-500,
+.theme-matrix [class*="from-purple-500"][class*="via-violet-500"][class*="to-indigo-500"] {
+  background: linear-gradient(to right, #00cc33, #00ff41, #00cc33) !important;
+}
+
+/* Card decorative corners: purple → green */
+.theme-matrix [class*="from-purple-500\\/10"],
+.theme-matrix [class*="from-indigo-500\\/10"] {
+  --tw-gradient-from: rgba(0, 255, 65, 0.1) !important;
+}
+
+/* All purple text → green */
 .theme-matrix .text-purple-600,
-.theme-matrix .dark\:text-purple-400 {
+.theme-matrix .text-purple-500,
+.theme-matrix .text-purple-400,
+.theme-matrix .dark\:text-purple-400,
+.theme-matrix .dark\:text-purple-300 {
   color: #00ff41 !important;
 }
 
-/* Plan card badge: green instead of purple */
-.theme-matrix .bg-purple-500 {
-  background-color: #00cc33 !important;
+/* Purple backgrounds → green */
+.theme-matrix .bg-purple-500,
+.theme-matrix .bg-purple-600,
+.theme-matrix .bg-purple-50,
+.theme-matrix .dark\:bg-purple-900\/30 {
+  background-color: rgba(0, 204, 51, 0.15) !important;
 }
 
+/* Purple borders → green */
+.theme-matrix .border-purple-200\/50,
+.theme-matrix .dark\:border-purple-700\/30,
+.theme-matrix .border-purple-200,
+.theme-matrix .border-purple-600,
+.theme-matrix .dark\:border-purple-700,
 .theme-matrix .ring-purple-500 {
+  border-color: rgba(0, 255, 65, 0.3) !important;
   --tw-ring-color: #00cc33 !important;
 }
 
-.theme-matrix .border-purple-600,
-.theme-matrix .text-purple-600.border-purple-600 {
-  border-color: #00cc33 !important;
-  color: #00ff41 !important;
+/* Plan card gradient buttons: purple → green */
+.theme-matrix [class*="from-purple-600"][class*="to-violet-600"] {
+  background: linear-gradient(to right, #00aa28, #00cc33) !important;
 }
 
-/* Plan card icon background */
-.theme-matrix .from-purple-50,
-.theme-matrix .to-purple-100,
-.theme-matrix .dark\:from-purple-900\/50,
-.theme-matrix .dark\:to-purple-800\/50 {
-  background: rgba(0, 204, 51, 0.15) !important;
+.theme-matrix [class*="hover\\:from-purple-700"]:hover {
+  background: linear-gradient(to right, #009922, #00aa28) !important;
 }
 
-.theme-matrix .border-purple-200,
-.theme-matrix .dark\:border-purple-700 {
-  border-color: rgba(0, 255, 65, 0.3) !important;
+/* Popular badge gradient → green */
+.theme-matrix [class*="from-purple-600"][class*="to-violet-600"].shadow-lg {
+  background: linear-gradient(to right, #00aa28, #00cc33) !important;
+  --tw-shadow-color: rgba(0, 204, 51, 0.3) !important;
 }
 
-/* Plan card buttons */
-.theme-matrix .bg-purple-600 {
-  background-color: #00cc33 !important;
+/* Shadow purple → green */
+.theme-matrix .shadow-purple-500\/15,
+.theme-matrix .dark\:shadow-purple-500\/25,
+.theme-matrix .shadow-purple-500\/20,
+.theme-matrix .shadow-purple-500\/30 {
+  --tw-shadow-color: rgba(0, 204, 51, 0.2) !important;
 }
 
-.theme-matrix .hover\:bg-purple-700:hover {
-  background-color: #009922 !important;
+/* Price text gradient: purple → green */
+.theme-matrix .bg-gradient-to-r.from-purple-600.to-violet-600.bg-clip-text {
+  background: linear-gradient(to right, #00cc33, #00ff41) !important;
+  -webkit-background-clip: text !important;
 }
 
 /* Plan card hover states */
@@ -281,7 +307,26 @@
   border-color: #00ff41 !important;
 }
 
-/* Card text should be light on dark green bg */
+/* Card text should be light green on dark green bg */
+.theme-matrix .plan-card-matrix .text-gray-900,
+.theme-matrix .plan-card-matrix .dark\:text-white,
+.theme-matrix .plan-card-matrix [class*="dark:text-white"] {
+  color: #e0ffe0 !important;
+}
+
+.theme-matrix .plan-card-matrix .text-gray-500,
+.theme-matrix .plan-card-matrix .text-gray-600,
+.theme-matrix .plan-card-matrix .dark\:text-gray-400,
+.theme-matrix .plan-card-matrix .dark\:text-gray-300 {
+  color: #a0d8a0 !important;
+}
+
+/* Loading spinner purple → green */
+.theme-matrix .text-brand-purple {
+  color: #00cc33 !important;
+}
+
+/* Section headers in matrix theme */
 .theme-matrix section .text-gray-900,
 .theme-matrix section .dark\:text-gray-100 {
   color: #e0ffe0 !important;
@@ -289,7 +334,32 @@
 
 .theme-matrix section .text-gray-600,
 .theme-matrix section .dark\:text-gray-400,
-.theme-matrix section .text-gray-500,
-.theme-matrix section .dark\:text-gray-400 {
+.theme-matrix section .text-gray-500 {
   color: #a0d8a0 !important;
+}
+
+/* ===== HERO: purple decorative blurs → green ===== */
+.theme-matrix .bg-purple-500\/20 {
+  background-color: rgba(0, 204, 51, 0.2) !important;
+}
+
+/* ===== Plans section background decorations → green ===== */
+.theme-matrix [class*="from-purple-500\\/5"],
+.theme-matrix [class*="from-purple-500\\/10"],
+.theme-matrix [class*="from-brand-purple\\/10"] {
+  --tw-gradient-from: rgba(0, 204, 51, 0.1) !important;
+}
+
+/* Category header icon and count badge */
+.theme-matrix .text-purple-600.dark\:text-purple-400 {
+  color: #00ff41 !important;
+}
+
+.theme-matrix .bg-purple-600.text-white.rounded-full {
+  background-color: #00cc33 !important;
+}
+
+/* Carousel play/pause button */
+.theme-matrix .text-brand-purple.dark\:text-brand-purple {
+  color: #00cc33 !important;
 }
