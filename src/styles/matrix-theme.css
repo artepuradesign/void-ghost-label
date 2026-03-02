@@ -138,7 +138,7 @@
   border-color: #00cc33 !important;
 }
 
-/* ===== LOGO: API white, Painel green in dark matrix ===== */
+/* ===== LOGO: dark matrix = green, white, black only ===== */
 .theme-matrix.dark .text-brand-purple.dark\:text-purple-400[class*="animate-logo"] {
   color: #00ff41 !important;
 }
@@ -149,9 +149,9 @@
   color: #00ff41 !important;
 }
 
-/* Logo: icon and "API" white, "Painel" green in dark matrix */
+/* Logo DARK: icon green, "API" white, "Painel" green */
 .theme-matrix.dark .matrix-logo-icon {
-  color: #ffffff !important;
+  color: #00ff41 !important;
 }
 
 .theme-matrix.dark .matrix-logo-api {
@@ -160,4 +160,23 @@
 
 .theme-matrix.dark .matrix-logo-painel {
   color: #00ff41 !important;
+}
+
+/* Logo LIGHT: icon alternates black/green/white, text black */
+.theme-matrix:not(.dark) .matrix-logo-icon {
+  animation: matrix-logo-icon-light 3s ease-in-out infinite !important;
+}
+
+.theme-matrix:not(.dark) .matrix-logo-api {
+  color: #000000 !important;
+}
+
+.theme-matrix:not(.dark) .matrix-logo-painel {
+  color: #000000 !important;
+}
+
+@keyframes matrix-logo-icon-light {
+  0%, 100% { color: #000000; }
+  33% { color: #00cc33; }
+  66% { color: #ffffff; }
 }
