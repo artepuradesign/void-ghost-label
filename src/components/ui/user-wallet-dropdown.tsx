@@ -152,13 +152,16 @@ const UserWalletDropdown = ({ onLogout }: UserWalletDropdownProps) => {
         <>
           {/* Dark Overlay */}
           <div 
-            className="fixed inset-0 bg-black/60 dark:bg-black/80 z-[800]"
+            className="fixed inset-0 bg-black/60 dark:bg-black/80 z-[800] backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
           />
           
-          {/* Centered Dropdown */}
+          {/* Centered Dropdown - flex container for true centering */}
           <div 
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[900] bg-white dark:bg-gray-900 border-2 border-border rounded-lg shadow-2xl w-80 md:w-96"
+            className="fixed inset-0 z-[900] flex items-center justify-center p-4 pointer-events-none"
+          >
+          <div 
+            className="bg-white dark:bg-gray-900 border-2 border-border rounded-lg shadow-2xl w-80 md:w-96 pointer-events-auto"
             style={{ 
               boxShadow: '0px 20px 32px 0px hsl(var(--shadow)/0.15)' 
             }}
@@ -331,6 +334,7 @@ const UserWalletDropdown = ({ onLogout }: UserWalletDropdownProps) => {
             </div>
 
           </Card>
+          </div>
           </div>
         </>
       )}
